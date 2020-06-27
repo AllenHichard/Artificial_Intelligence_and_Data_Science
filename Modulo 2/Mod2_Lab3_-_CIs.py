@@ -12,6 +12,7 @@ def t_one_sample(samp, mu=0.0, alpha=0.05):
     scale = np.std(samp)
     loc = np.mean(samp)
     ci = stats.t.cdf(alpha / 2, len(samp), loc=mu, scale=scale)
+    print('ci', ci)
     print('Results of one-sample two-sided t test')
     print('Mean         = %4.3f' % loc)
     print('t-Statistic  = %4.3f' % t_stat[0])
